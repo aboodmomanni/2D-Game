@@ -6,7 +6,7 @@
 /*   By: aalmoman <aalmoman@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 10:00:00 by student           #+#    #+#             */
-/*   Updated: 2026/01/19 02:01:34 by aalmoman         ###   ########.fr       */
+/*   Updated: 2026/01/21 21:35:56 by aalmoman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,33 +53,33 @@ typedef struct s_game
 	t_assets	tex;
 }				t_game;
 
-/* board_loader.c - Map loading */
+/* board_loader.c */
 char	**board_parse(char *filepath);
 
-/* board_checker.c - Map validation */
+/* board_checker.c */
 int		board_validate(char **grid);
 int		board_path_check(char **grid);
 
-/* grid_utils.c - Grid utility functions */
+/* grid_utils.c */
 int		grid_height(char **grid);
 int		grid_width(char **grid);
 int		grid_char_ok(char **grid);
 void	locate_hero(int *col, int *row, char **grid);
 void	arr_destroy(char **arr);
 
-/* setup.c - Game initialization */
+/* setup.c */
 int		game_setup(t_game *gm, char **grid);
 
-/* display.c - Rendering */
+/* display.c */
 void	assets_load(t_game *gm);
 void	render_board(t_game *gm);
 
-/* controls.c - Input handling */
+/* controls.c */
 int		key_press(int keycode, t_game *gm);
 int		window_close(t_game *gm);
 void	cleanup_exit(t_game *gm);
 
-/* hero_motion.c - Player movement */
+/* hero_motion.c */
 void	hero_step(t_game *gm, int dcol, int drow);
 
 #endif

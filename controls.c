@@ -6,7 +6,7 @@
 /*   By: aalmoman <aalmoman@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 10:00:00 by student           #+#    #+#             */
-/*   Updated: 2026/01/19 01:41:01 by aalmoman         ###   ########.fr       */
+/*   Updated: 2026/01/21 21:33:03 by aalmoman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,23 @@ void	cleanup_exit(t_game *gm)
 {
 	if (gm->grid)
 		arr_destroy(gm->grid);
-	if (gm->tex.door)
-		mlx_destroy_image(gm->mlx, gm->tex.door);
-	if (gm->tex.ground)
-		mlx_destroy_image(gm->mlx, gm->tex.ground);
-	if (gm->tex.hero)
-		mlx_destroy_image(gm->mlx, gm->tex.hero);
-	if (gm->tex.brick)
-		mlx_destroy_image(gm->mlx, gm->tex.brick);
-	if (gm->tex.gem)
-		mlx_destroy_image(gm->mlx, gm->tex.gem);
-	if (gm->win)
-		mlx_destroy_window(gm->mlx, gm->win);
-	mlx_destroy_display(gm->mlx);
-	free(gm->mlx);
+	if (gm->mlx)
+	{
+		if (gm->tex.door)
+			mlx_destroy_image(gm->mlx, gm->tex.door);
+		if (gm->tex.ground)
+			mlx_destroy_image(gm->mlx, gm->tex.ground);
+		if (gm->tex.hero)
+			mlx_destroy_image(gm->mlx, gm->tex.hero);
+		if (gm->tex.brick)
+			mlx_destroy_image(gm->mlx, gm->tex.brick);
+		if (gm->tex.gem)
+			mlx_destroy_image(gm->mlx, gm->tex.gem);
+		if (gm->win)
+			mlx_destroy_window(gm->mlx, gm->win);
+		mlx_destroy_display(gm->mlx);
+		free(gm->mlx);
+	}
 	exit(0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: aalmoman <aalmoman@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 10:00:00 by student           #+#    #+#             */
-/*   Updated: 2026/01/19 02:02:06 by aalmoman         ###   ########.fr       */
+/*   Updated: 2026/01/21 21:33:30 by aalmoman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,10 @@ char	**board_parse(char *filepath)
 		return (NULL);
 	content = ft_strdup("");
 	if (!content)
+	{
+		close(fd);
 		return (NULL);
+	}
 	content = accumulate_content(content, fd);
 	close(fd);
 	if (!content)

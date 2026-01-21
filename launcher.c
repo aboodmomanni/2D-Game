@@ -6,7 +6,7 @@
 /*   By: aalmoman <aalmoman@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 10:00:00 by student           #+#    #+#             */
-/*   Updated: 2026/01/19 02:03:19 by aalmoman         ###   ########.fr       */
+/*   Updated: 2026/01/21 21:38:42 by aalmoman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,17 @@ static void	check_args(int argc, char *file)
 	}
 }
 
+static void	init_game_state(t_game *gm, char **grid)
+{
+	gm->grid = grid;
+	gm->height = grid_height(gm->grid);
+	gm->width = grid_width(gm->grid);
+	gm->steps = 0;
+	gm->on_door = 0;
+	gm->gems_left = tally_gems(gm);
+	locate_hero(&gm->hero_col, &gm->hero_row, gm->grid);
+}
+
 static int	close_and_exit(t_game *gm)
 {
 	arr_destroy(gm->grid);
@@ -65,6 +76,7 @@ int	main(int argc, char **argv)
 	char	**grid;
 	t_game	gm;
 
+	ft_bzero(&gm, sizeof(t_game));
 	check_args(argc, argv[1]);
 	grid = board_parse(argv[1]);
 	if (!grid)
@@ -76,12 +88,7 @@ int	main(int argc, char **argv)
 		return (write(2, "Error\n", 6));
 	}
 	gm.grid = grid;
-	gm.height = grid_height(gm.grid);
-	gm.width = grid_width(gm.grid);
-	gm.steps = 0;
-	gm.on_door = 0;
-	gm.gems_left = tally_gems(&gm);
-	locate_hero(&gm.hero_col, &gm.hero_row, gm.grid);
+	init_game_state(&gm, grid);
 	assets_load(&gm);
 	render_board(&gm);
 	mlx_key_hook(gm.win, key_press, &gm);
