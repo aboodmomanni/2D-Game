@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalmoman <aalmoman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aalmoman <aalmoman@aalmoman.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 18:49:02 by aalmoman          #+#    #+#             */
 /*   Updated: 2025/10/19 18:49:02 by aalmoman         ###   ########.fr       */

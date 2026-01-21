@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalmoman <aalmoman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aalmoman <aalmoman@aalmoman.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 15:48:18 by aalmoman          #+#    #+#             */
 /*   Updated: 2026/01/08 14:32:14 by aalmoman         ###   ########.fr       */

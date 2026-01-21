@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalmoman <aalmoman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aalmoman <aalmoman@aalmoman.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 06:05:40 by marvin            #+#    #+#             */
 /*   Updated: 2025/09/08 20:05:04 by aalmoman         ###   ########.fr       */
